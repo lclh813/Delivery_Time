@@ -5,6 +5,8 @@ It is possible that GitHub fails to display Jupyter Notebooks. Should such circu
 ## Part 1. Objective
 
 <div align=center><img src="https://github.com/lclh813/Delivery_Time/blob/master/Pic/P_0_Circumstances.png"/></div>
-<div align=center><img src="https://github.com/lclh813/Delivery_Time/blob/master/Pic/P_1_TimeDeduction.png"/></div>
-<div align=center><img src="https://github.com/lclh813/Delivery_Time/blob/master/Pic/P_2_TimeAddition.png"/></div>
+
+<div align=center><img src="https://github.com/lclh813/Delivery_Time/blob/master/Pic/P_1_TimeAddition.png"/></div>
+
+<div align=center><img src="https://github.com/lclh813/Delivery_Time/blob/master/Pic/P_2_TimeDeduction.png"/></div>
 
