@@ -9,7 +9,6 @@ To calculate delivery time with out-of-hours exclusion.
 ### 2.1. Background Information
 - Business hours: D1 8:00 - D1 21:00
 - Out of hours: D1 21:00 - D2 8:00
-<div align=center><img src="https://github.com/lclh813/Delivery_Time/blob/master/Pic/P_0_Circumstances.png"/></div>
 
 ### 2.2. Original Data
 | Order          | Delivery       |
@@ -32,6 +31,11 @@ To calculate delivery time with out-of-hours exclusion.
 | 2020/1/1 23:00 | 2020/1/8 7:00  | 78h            |
 | 2020/1/1 23:00 | 2020/1/2 11:00 | 3h             |
 | 2020/1/1 9:00  | 2020/1/1 18:00 | 9h             |
+
+- According to when the ***order*** is made and when the ***delivery*** is completed, there are 3 scenarioss to be taken into account when calculating delivery time.
+
+<div align=center><img src="https://github.com/lclh813/Delivery_Time/blob/master/Pic/P_0_Circumstances.png"/></div>
+
 
 
 <div align=center><img src="https://github.com/lclh813/Delivery_Time/blob/master/Pic/P_1_TimeAddition.png"/></div>
