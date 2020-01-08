@@ -11,7 +11,7 @@ To calculate delivery time with out-of-hours exclusion.
 - Out of hours: D1 21:00 - D2 8:00
 
 ### 2.2. Original Data
-| Order Log      | Delivery Log   |
+| Order          | Delivery       |
 | :---           | :---           |
 | 2020/1/1 14:00 | 2020/1/8 11:00 |
 | 2020/1/1 14:00 | 2020/1/8 7:00  |
@@ -22,7 +22,7 @@ To calculate delivery time with out-of-hours exclusion.
 | 2020/1/1 9:00  | 2020/1/1 18:00 |
 
 ### 2.3. Expected Result
-| Order Log      | Delivery Log   | Delivery Time  |
+| Order          | Delivery       | Delivery Time  |
 | :---           | :---           | :---           |
 | 2020/1/1 14:00 | 2020/1/8 11:00 | 88h            |
 | 2020/1/1 14:00 | 2020/1/8 7:00  | 85h            |
