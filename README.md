@@ -38,6 +38,7 @@ To calculate delivery time with out-of-hours exclusion.
 <div align=center><img src="https://github.com/lclh813/Delivery_Time/blob/master/Pic/P_0_Circumstances.png"/></div>
 
 - There are 2 ways to calculate the expected delivery time:
+
 ### 3.1. Time Addition
 - Add up eligible delivery time.
 > Pros: Intuitive. 
