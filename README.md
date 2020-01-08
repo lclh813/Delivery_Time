@@ -55,12 +55,12 @@ def time_addition(order, delivery):
     delivery_8 = datetime.datetime(delivery.year, delivery.month, delivery.day, 8, 0) 
     
     if order_date != delivery_date:
-        first_day_duration = max((order_21-order).total_seconds() / 3600, 0)
-        last_day_duration = max((delivery-delivery_8).total_seconds() / 3600, 0)
-        delivery_duration = (delivery_date-order_date).days-1
+        first_day_duration = max((order_21 - order).total_seconds() / 3600, 0)
+        last_day_duration = max((delivery - delivery_8).total_seconds() / 3600, 0)
+        delivery_duration = (delivery_date - order_date).days - 1
         total_duration = first_day_duration + last_day_duration + delivery_duration*13        
     elif order_date == delivery_date:
-        total_duration = (delivery-order).total_seconds() / 3600
+        total_duration = (delivery - order).total_seconds() / 3600
         
     return total_duration
 ```
@@ -81,11 +81,11 @@ def time_deduction(order, delivery):
     order_21 = datetime.datetime(order.year, order.month, order.day, 21, 0)
     delivery_8 = datetime.datetime(delivery.year, delivery.month, delivery.day, 8, 0)
     
-    duration = (delivery-order).total_seconds() / 3600    
-    deduction = (delivery_date-order_date).days 
+    duration = (delivery - order).total_seconds() / 3600    
+    deduction = (delivery_date - order_date).days 
     
-    first_day_deduction = min((order_21-order).total_seconds() / 3600, 0)
-    last_day_deduction = min((delivery-delivery_8).total_seconds() / 3600, 0)
+    first_day_deduction = min((order_21 - order).total_seconds() / 3600, 0)
+    last_day_deduction = min((delivery - delivery_8).total_seconds() / 3600, 0)
     
     total_duration = duration - first_day_deduction - last_day_deduction - deduction*11
     
