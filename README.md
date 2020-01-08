@@ -7,8 +7,8 @@ To calculate delivery time with out-of-hours exclusion.
 
 ## Part 2. Data
 ### 2.1. Background Information
-- Business hours: D1 8:00 - D1 21:00
-- Out of hours: D1 21:00 - D2 8:00
+- Business hours: **D1** 8:00 - **D1** 21:00
+- Out of hours: **D1** 21:00 - **D2** 8:00
 
 ### 2.2. Original Data
 | Order          | Delivery       |
