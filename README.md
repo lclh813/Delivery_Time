@@ -41,7 +41,9 @@ To calculate delivery time with out-of-hours exclusion.
 - Add up eligible delivery time.
 
 <div align=center><img src="https://github.com/lclh813/Delivery_Time/blob/master/Pic/P_1_TimeAddition.png"/></div>
+
 ### 2.3.2. Time Deduction
-- Add up eligible delivery time.
+- Deduct ineligible delivery time.
+
 <div align=center><img src="https://github.com/lclh813/Delivery_Time/blob/master/Pic/P_2_TimeDeduction.png"/></div>
 
