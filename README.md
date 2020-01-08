@@ -11,7 +11,7 @@ To calculate delivery time with out-of-hours exclusion.
 - Out of hours: D1 21:00 - D2 8:00
 
 ### 2.2. Original Data
-| Order          | Delivery       |
+| Order Log      | Delivery Log   |
 | :---           | :---           |
 | 2020/1/1 14:00 | 2020/1/8 11:00 |
 | 2020/1/1 14:00 | 2020/1/8 7:00  |
@@ -22,7 +22,7 @@ To calculate delivery time with out-of-hours exclusion.
 | 2020/1/1 9:00  | 2020/1/1 18:00 |
 
 ### 2.3. Expected Result
-| Order          | Delivery       | Delivery Time  |
+| Order Log      | Delivery Log   | Delivery Time  |
 | :---           | :---           | :---           |
 | 2020/1/1 14:00 | 2020/1/8 11:00 | 88h            |
 | 2020/1/1 14:00 | 2020/1/8 7:00  | 85h            |
@@ -36,9 +36,12 @@ To calculate delivery time with out-of-hours exclusion.
 
 <div align=center><img src="https://github.com/lclh813/Delivery_Time/blob/master/Pic/P_0_Circumstances.png"/></div>
 
-
+- There are 2 ways to calculate the expected delivery time:
+### 2.3.1. Time Addition
+- Add up eligible delivery time.
 
 <div align=center><img src="https://github.com/lclh813/Delivery_Time/blob/master/Pic/P_1_TimeAddition.png"/></div>
-
+### 2.3.2. Time Deduction
+- Add up eligible delivery time.
 <div align=center><img src="https://github.com/lclh813/Delivery_Time/blob/master/Pic/P_2_TimeDeduction.png"/></div>
 
