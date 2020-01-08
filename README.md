@@ -34,16 +34,14 @@ To calculate delivery time with out-of-hours exclusion.
 
 ## Part 3. Outline
 - According to when the order is made and when the delivery is completed, there are ***3 circumstances*** to be taken into account when calculating delivery time.
+- The calculation can be achieved by either ***adding up*** or ***subtracting down.***
 
 <div align=center><img src="https://github.com/lclh813/Delivery_Time/blob/master/Pic/P_0_Circumstances.png"/></div>
 
-- The calculation can be achieved by either ***adding up*** or ***subtracting down.***
-
 ### 3.1. Time Addition
 - Add up eligible delivery time.
-> Pros: Intuitive. 
-
-> Cons: Need to consider if ***order*** and ***delivery*** are completed on the same day.
+- ***Pros:*** Intuitive. 
+- ***Cons:*** Need to consider if ***order*** and ***delivery*** are completed on the same day.
 
 <div align=center><img src="https://github.com/lclh813/Delivery_Time/blob/master/Pic/P_1_TimeAddition.png"/></div>
 
@@ -69,9 +67,8 @@ def time_addition(order, delivery):
 
 ### 3.2. Time Deduction
 - Deduct ineligible delivery time.
-> Pros: Whether ***order*** and ***delivery*** are completed on the same day is not relevant.
-
-> Cons: Counterintuitive.
+- ***Pros:*** Whether ***order*** and ***delivery*** are completed on the same day is not relevant.
+- ***Cons:*** Counterintuitive.
 
 <div align=center><img src="https://github.com/lclh813/Delivery_Time/blob/master/Pic/P_2_TimeDeduction.png"/></div>
 
