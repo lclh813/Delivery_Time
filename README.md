@@ -32,18 +32,49 @@ To calculate delivery time with out-of-hours exclusion.
 | 2020/1/1 23:00 | 2020/1/2 11:00 | 3h             |
 | 2020/1/1 9:00  | 2020/1/1 18:00 | 9h             |
 
-- According to when the ***order*** is made and when the ***delivery*** is completed, there are 3 scenarioss to be taken into account when calculating delivery time.
+## Part 3. Outline
+- According to when the order is made and when the delivery is completed, there are 3 scenarioss to be taken into account when calculating delivery time.
 
 <div align=center><img src="https://github.com/lclh813/Delivery_Time/blob/master/Pic/P_0_Circumstances.png"/></div>
 
 - There are 2 ways to calculate the expected delivery time:
-### 2.3.1. Time Addition
+### 3.1. Time Addition
 - Add up eligible delivery time.
 
 <div align=center><img src="https://github.com/lclh813/Delivery_Time/blob/master/Pic/P_1_TimeAddition.png"/></div>
 
-### 2.3.2. Time Deduction
+```
+def time_addition(order, delivery):
+    order_date, order_time, delivery_date, delivery_time = order.date(), order.time(), delivery.date(), delivery.time()
+    order_21 = datetime.datetime(order.year, order.month, order.day, 21, 0)
+    delivery_8 = datetime.datetime(delivery.year, delivery.month, delivery.day, 8, 0) 
+    if order_date != delivery_date:
+        first_day_duration = max((order_21-order).total_seconds() / 3600, 0)
+        last_day_duration = max((delivery-delivery_8).total_seconds() / 3600, 0)
+        delivery_duration = (delivery_date-order_date).days-1
+        total_duration = first_day_duration + last_day_duration + delivery_duration*13        
+    elif order_date == delivery_date:
+        total_duration = (delivery-order).total_seconds() / 3600
+    return total_duration
+```
+
+### 3.2. Time Deduction
 - Deduct ineligible delivery time.
 
 <div align=center><img src="https://github.com/lclh813/Delivery_Time/blob/master/Pic/P_2_TimeDeduction.png"/></div>
 
+```
+def time_deduction(order, delivery):
+    order_date, order_time, delivery_date, delivery_time = order.date(), order.time(), delivery.date(), delivery.time()
+    order_21 = datetime.datetime(order.year, order.month, order.day, 21, 0)
+    delivery_8 = datetime.datetime(delivery.year, delivery.month, delivery.day, 8, 0)
+    
+    duration = (delivery-order).total_seconds() / 3600    
+    deduction = (delivery_date-order_date).days 
+    
+    first_day_deduction = min((order_21-order).total_seconds() / 3600, 0)
+    last_day_deduction = min((delivery-delivery_8).total_seconds() / 3600, 0)
+    
+    total_duration = duration - first_day_deduction - last_day_deduction - deduction*11
+    return total_duration
+```
