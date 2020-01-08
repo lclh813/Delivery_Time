@@ -12,7 +12,7 @@ To calculate delivery time with out-of-hours exclusion.
 
 ### 2.2. Original Data
 | Order          | Delivery       |
-| :---:          | :---:          |
+| :---           | :---           |
 | 2020/1/1 14:00 | 2020/1/8 11:00 |
 | 2020/1/1 14:00 | 2020/1/8 7:00  |
 | 2020/1/1 14:00 | 2020/1/2 11:00 |
@@ -23,7 +23,7 @@ To calculate delivery time with out-of-hours exclusion.
 
 ### 2.3. Expected Result
 | Order          | Delivery       | Delivery Time  |
-| :---:          | :---:          | :---:          |
+| :---           | :---           | :---           |
 | 2020/1/1 14:00 | 2020/1/8 11:00 | 88h            |
 | 2020/1/1 14:00 | 2020/1/8 7:00  | 85h            |
 | 2020/1/1 14:00 | 2020/1/2 11:00 | 10h            |
