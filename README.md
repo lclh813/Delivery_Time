@@ -33,7 +33,7 @@ To calculate delivery time with out-of-hours exclusion.
 | 2020/1/1 9:00  | 2020/1/1 18:00 | 9h             |
 
 ## Part 3. Outline
-- According to when the order is made and when the delivery is completed, there are 3 scenarioss to be taken into account when calculating delivery time.
+- According to when the order is made and when the delivery is completed, there are ***3 circumstances*** to be taken into account when calculating delivery time.
 
 <div align=center><img src="https://github.com/lclh813/Delivery_Time/blob/master/Pic/P_0_Circumstances.png"/></div>
 
