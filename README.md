@@ -91,3 +91,5 @@ def time_deduction(order, delivery):
     
     return total_duration
 ```
+# Part 4. Code
+> [***Complete Code***](https://nbviewer.jupyter.org/github/lclh813/Delivery_Time/blob/master/CompleteCode.ipynb)
