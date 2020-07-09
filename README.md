@@ -91,3 +91,16 @@ def time_deduction(order, delivery):
     
     return total_duration
 ```
+### 3.3. Expected Result
+```
+def df_apply_delivery_time(row, is_addition):
+    if is_addition:
+        duration = time_addition(row['Order'], row['Delivery'])
+    else: 
+        duration = time_deduction(row['Order'], row['Delivery'])
+    return duration
+```
+```
+df['Delivery Time (Addition)'] = df.apply(df_apply_delivery_time, is_addition=True, axis=1)
+df['Delivery Time (Deduction)'] = df.apply(df_apply_delivery_time, is_addition=False, axis=1)
+```
